@@ -68,7 +68,7 @@ public class UserServiceImpl implements UserService {
             Page<UserEntity> userPage = userRepository.findAll(pageable);
 
             List<UserDto> userDtos = userPage.getContent().stream()
-                    .filter(user -> !user.getRole().equals(Role.OWNER))
+                    .filter(user -> !user.getRole().equals(Role.ADMIN))
                     .map(UserDto::new)
                     .collect(Collectors.toList());
 

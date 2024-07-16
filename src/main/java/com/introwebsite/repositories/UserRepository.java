@@ -13,6 +13,6 @@ public interface UserRepository extends JpaRepository<UserEntity, Long> {
     Optional<UserEntity> findById(Long id);
 
     @Query("""
-            SELECT t FROM UserEntity t WHERE t.role <> com.introwebsite.enums.Role.OWNER""")
+            SELECT t FROM UserEntity t WHERE t.role <> com.introwebsite.enums.Role.ADMIN""")
     List<UserEntity> findAllUserByRole();
 }
