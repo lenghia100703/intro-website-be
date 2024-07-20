@@ -7,6 +7,7 @@ import com.introwebsite.dtos.common.CommonResponseDto;
 import com.introwebsite.dtos.user.UserInfoInToken;
 import com.introwebsite.dtos.user.UserDto;
 import com.introwebsite.entities.UserEntity;
+import com.introwebsite.enums.AuthProvider;
 import com.introwebsite.enums.Role;
 import com.introwebsite.enums.ResponseCode;
 import com.introwebsite.exceptions.CommonException;
@@ -88,6 +89,7 @@ public class AuthServiceImpl implements AuthService {
         user.setEmail(signUpDto.getEmail());
         user.setUsername(signUpDto.getUsername());
         user.setRole(Role.valueOf(signUpDto.getRole()));
+        user.setProvider(AuthProvider.LOCAL);
         user.setAvatar(defaultAvatar);
         user.setCreatedAt(new Date(System.currentTimeMillis()));
         user.setCreatedBy(signUpDto.getEmail());
