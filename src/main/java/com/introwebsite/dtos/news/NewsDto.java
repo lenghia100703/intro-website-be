@@ -1,7 +1,6 @@
 package com.introwebsite.dtos.news;
 
 import com.introwebsite.entities.NewsEntity;
-import com.introwebsite.entities.ProductEntity;
 import lombok.Data;
 
 import java.util.Date;

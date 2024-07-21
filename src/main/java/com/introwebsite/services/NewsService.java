@@ -13,10 +13,10 @@ public interface NewsService {
     PaginatedDataDto<NewsDto> getNewsByPage(int page);
 
     CommonResponseDto<NewsDto> createNews(String title, String description,
-                                                String image, MultipartFile file) throws IOException;
+                                          String image, MultipartFile file) throws IOException;
 
     CommonResponseDto<String> editNews(Long id, String title, String description,
-                                          String image, MultipartFile file) throws IOException;
+                                       String image, MultipartFile file) throws IOException;
 
     CommonResponseDto<String> deleteNews(Long id);
 }

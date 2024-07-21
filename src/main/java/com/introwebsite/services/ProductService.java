@@ -2,7 +2,6 @@ package com.introwebsite.services;
 
 import com.introwebsite.dtos.common.CommonResponseDto;
 import com.introwebsite.dtos.common.PaginatedDataDto;
-import com.introwebsite.dtos.product.AddProductDto;
 import com.introwebsite.dtos.product.ProductDto;
 import org.springframework.web.multipart.MultipartFile;
 

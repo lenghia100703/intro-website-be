@@ -3,13 +3,9 @@ package com.introwebsite.services.impl;
 import com.introwebsite.constants.PageableConstants;
 import com.introwebsite.dtos.common.CommonResponseDto;
 import com.introwebsite.dtos.common.PaginatedDataDto;
-import com.introwebsite.dtos.product.AddProductDto;
 import com.introwebsite.dtos.product.ProductDto;
-import com.introwebsite.dtos.user.UserDto;
 import com.introwebsite.entities.ProductEntity;
-import com.introwebsite.entities.UserEntity;
 import com.introwebsite.enums.ResponseCode;
-import com.introwebsite.enums.Role;
 import com.introwebsite.exceptions.CommonException;
 import com.introwebsite.repositories.ProductRepository;
 import com.introwebsite.services.ProductService;
@@ -27,8 +23,6 @@ import java.util.Date;
 import java.util.List;
 import java.util.Objects;
 import java.util.stream.Collectors;
-
-import static com.introwebsite.enums.ResponseCode.ERROR;
 
 @Service
 public class ProductServiceImpl implements ProductService {
