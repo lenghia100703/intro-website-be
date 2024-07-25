@@ -79,6 +79,10 @@ public class SecurityConfig {
                                 .requestMatchers("/api/user/**").permitAll()
                                 .requestMatchers("/api/product/**").permitAll()
                                 .requestMatchers("/api/news/**").permitAll()
+                                .requestMatchers("/api/messages/**").permitAll()
+                                .requestMatchers("/chat").permitAll()
+                                .requestMatchers("/topic/**").permitAll()
+                                .requestMatchers("/app/**").permitAll()
                                 .anyRequest().authenticated())
                 .authenticationProvider(authenticationProvider());
 

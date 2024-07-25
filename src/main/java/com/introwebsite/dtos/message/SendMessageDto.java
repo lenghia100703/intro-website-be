@@ -7,5 +7,6 @@ public class SendMessageDto {
     private String content;
     private String sender;
     private String receiver;
-    private String username;
+    private String usernameSender;
+    private String usernameReceiver;
 }

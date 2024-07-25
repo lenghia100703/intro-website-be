@@ -19,7 +19,9 @@ public class MessageEntity extends BaseEntity {
 
     private String sender;
 
-    private String username;
+    private String usernameSender;
+
+    private String usernameReceiver;
 
     private String receiver;
 
