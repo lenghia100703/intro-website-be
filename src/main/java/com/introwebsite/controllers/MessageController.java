@@ -2,7 +2,6 @@ package com.introwebsite.controllers;
 
 import com.introwebsite.dtos.common.CommonResponseDto;
 import com.introwebsite.dtos.message.MessageDto;
-import com.introwebsite.dtos.message.ReceiverInfoDto;
 import com.introwebsite.dtos.message.SendMessageDto;
 import com.introwebsite.dtos.user.UserDto;
 import org.springframework.web.bind.annotation.*;

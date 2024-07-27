@@ -3,7 +3,6 @@ package com.introwebsite.services;
 import com.introwebsite.dtos.common.CommonResponseDto;
 import com.introwebsite.dtos.message.ContactDto;
 import com.introwebsite.dtos.message.MessageDto;
-import com.introwebsite.dtos.message.ReceiverInfoDto;
 import com.introwebsite.dtos.message.SendMessageDto;
 import com.introwebsite.dtos.user.UserDto;
 

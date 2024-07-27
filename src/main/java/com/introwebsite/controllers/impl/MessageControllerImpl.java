@@ -4,7 +4,6 @@ import com.introwebsite.controllers.MessageController;
 import com.introwebsite.dtos.common.CommonResponseDto;
 import com.introwebsite.dtos.message.ContactDto;
 import com.introwebsite.dtos.message.MessageDto;
-import com.introwebsite.dtos.message.ReceiverInfoDto;
 import com.introwebsite.dtos.message.SendMessageDto;
 import com.introwebsite.dtos.user.UserDto;
 import com.introwebsite.services.MessageService;

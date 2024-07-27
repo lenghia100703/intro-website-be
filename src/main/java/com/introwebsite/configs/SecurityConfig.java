@@ -81,9 +81,7 @@ public class SecurityConfig {
                                 .requestMatchers("/api/news/**").permitAll()
                                 .requestMatchers("/api/messages/**").permitAll()
                                 .requestMatchers("/chat/**").permitAll()
-                                .requestMatchers("/topic/**").permitAll()
                                 .requestMatchers("/user/**").permitAll()
-                                .requestMatchers("/queue/**").permitAll()
                                 .requestMatchers("/app/**").permitAll()
                                 .anyRequest().authenticated())
                 .authenticationProvider(authenticationProvider());
