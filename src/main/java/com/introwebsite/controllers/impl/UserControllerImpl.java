@@ -34,6 +34,11 @@ public class UserControllerImpl implements UserController {
     }
 
     @Override
+    public CommonResponseDto<UserDto> getUserByEmail(String email) {
+        return new CommonResponseDto<>(new UserDto(userService.findByEmail(email)));
+    }
+
+    @Override
     public PaginatedDataDto<UserDto> getUserByPage(int page) {
         return userService.getUserByPage(page);
     }

@@ -24,6 +24,13 @@ public class UserDto {
     private String createdBy;
     private String updatedBy;
 
+    public UserDto(String avatar, String email, String username, Long id) {
+        this.avatar = avatar;
+        this.email = email;
+        this.username = username;
+        this.id = id;
+    }
+
     public UserDto(UserEntity user) {
         this.id = user.getId();
         this.username = user.getUsername();

@@ -18,6 +18,9 @@ public interface UserController {
     @GetMapping("/me")
     CommonResponseDto<UserDto> getCurrentUser();
 
+    @GetMapping("/email/{email}")
+    CommonResponseDto<UserDto> getUserByEmail(@PathVariable("email") String email);
+
     @GetMapping("")
     PaginatedDataDto<UserDto> getUserByPage(@RequestParam(name = "page") int page);
 

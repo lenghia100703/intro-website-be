@@ -6,6 +6,7 @@ import com.introwebsite.dtos.message.ContactDto;
 import com.introwebsite.dtos.message.MessageDto;
 import com.introwebsite.dtos.message.ReceiverInfoDto;
 import com.introwebsite.dtos.message.SendMessageDto;
+import com.introwebsite.dtos.user.UserDto;
 import com.introwebsite.services.MessageService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RestController;
@@ -18,7 +19,7 @@ public class MessageControllerImpl implements MessageController {
     MessageService messageService;
 
     @Override
-    public CommonResponseDto<MessageDto> saveMessage(SendMessageDto messageDto) {
+    public MessageDto saveMessage(SendMessageDto messageDto) {
         return messageService.saveMessage(messageDto);
     }
 
@@ -28,12 +29,7 @@ public class MessageControllerImpl implements MessageController {
     }
 
     @Override
-    public CommonResponseDto<List<ReceiverInfoDto>> getMessagesBySender(String sender) {
+    public CommonResponseDto<List<UserDto>> getMessagesBySender(String sender) {
         return messageService.getListMessagesBySender(sender);
-    }
-
-    @Override
-    public CommonResponseDto<MessageDto> sendMessage(SendMessageDto messageDto) {
-        return messageService.saveMessage(messageDto);
     }
 }
