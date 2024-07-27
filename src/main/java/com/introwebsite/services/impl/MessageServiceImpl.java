@@ -55,16 +55,24 @@ public class MessageServiceImpl implements MessageService {
             receiver.setRole(Role.CUSTOMER);
             receiver.setProvider(AuthProvider.LOCAL);
             userRepository.save(receiver);
+        } else {
+            UserEntity receiver = userService.findByEmail(messageDto.getReceiver());
+            receiver.setUsername(messageDto.getUsernameReceiver());
+            userRepository.save(receiver);
         }
 
         if (userService.findByEmail(messageDto.getSender()) == null) {
-            UserEntity receiver = new UserEntity();
-            receiver.setEmail(messageDto.getSender());
-            receiver.setUsername(messageDto.getUsernameSender());
-            receiver.setAvatar(defaultAvatar);
-            receiver.setRole(Role.CUSTOMER);
-            receiver.setProvider(AuthProvider.LOCAL);
-            userRepository.save(receiver);
+            UserEntity sender = new UserEntity();
+            sender.setEmail(messageDto.getSender());
+            sender.setUsername(messageDto.getUsernameSender());
+            sender.setAvatar(defaultAvatar);
+            sender.setRole(Role.CUSTOMER);
+            sender.setProvider(AuthProvider.LOCAL);
+            userRepository.save(sender);
+        } else {
+            UserEntity sender = userService.findByEmail(messageDto.getSender());
+            sender.setUsername(messageDto.getUsernameSender());
+            userRepository.save(sender);
         }
 
         return new MessageDto(messageRepository.save(message));
