@@ -19,7 +19,6 @@ public class ProductEntity extends BaseEntity {
 
     private String name;
 
-    @Column(length = 500)
     private String description;
 
     @Column(length = 500)

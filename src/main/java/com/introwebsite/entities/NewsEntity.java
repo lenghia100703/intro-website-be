@@ -19,7 +19,6 @@ public class NewsEntity extends BaseEntity {
 
     private String title;
 
-    @Column(length = 500)
     private String description;
 
     @Column(length = 500)
