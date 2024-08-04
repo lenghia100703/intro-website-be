@@ -37,7 +37,6 @@ public class MessageServiceImpl implements MessageService {
 
     @Override
     public MessageDto saveMessage(SendMessageDto messageDto) {
-        System.out.println(messageDto);
         MessageEntity message = new MessageEntity();
 
         message.setSender(messageDto.getSender());
@@ -90,5 +89,12 @@ public class MessageServiceImpl implements MessageService {
         List<UserDto> entities = messageRepository.findDistinctReceiversBySender(sender);
 
         return new CommonResponseDto<>(entities);
+    }
+
+    @Override
+    public CommonResponseDto<String> deleteMessage(String email) {
+        messageRepository.deleteMessagesBetweenAdminAndUser("baobianquycuong@gmail.com", email);
+
+        return new CommonResponseDto<>("Deleted successfully");
     }
 }

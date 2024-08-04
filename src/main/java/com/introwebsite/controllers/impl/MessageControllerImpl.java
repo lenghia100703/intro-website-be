@@ -31,4 +31,9 @@ public class MessageControllerImpl implements MessageController {
     public CommonResponseDto<List<UserDto>> getMessagesBySender(String sender) {
         return messageService.getListMessagesBySender(sender);
     }
+
+    @Override
+    public CommonResponseDto<String> deleteMessage(String email) {
+        return messageService.deleteMessage(email);
+    }
 }

@@ -14,4 +14,6 @@ public interface MessageService {
     CommonResponseDto<List<MessageDto>> getMessages(ContactDto contactDto);
 
     CommonResponseDto<List<UserDto>> getListMessagesBySender(String sender);
+
+    CommonResponseDto<String> deleteMessage(String email);
 }

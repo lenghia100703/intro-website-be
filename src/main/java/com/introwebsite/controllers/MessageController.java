@@ -18,4 +18,7 @@ public interface MessageController {
 
     @GetMapping("/{sender}")
     CommonResponseDto<List<UserDto>> getMessagesBySender(@PathVariable(name = "sender") String sender);
+
+    @DeleteMapping("/{email}")
+    CommonResponseDto<String> deleteMessage(@PathVariable(name = "email") String email);
 }
